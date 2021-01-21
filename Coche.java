@@ -9,6 +9,12 @@ public class Coche extends Vehiculo {
         color = "Rojo";
     }
 
+    public Coche(String model, String matri, String col) {
+        modelo = model;
+        matricula = matri;
+        color = col;
+    }
+
     public String getModelo() {
         return this.modelo;
     }
@@ -33,10 +39,14 @@ public class Coche extends Vehiculo {
         this.color = color;
     }
 
-    public static void main(String[] args) throws Exception {
-        Coche cocheCoeta = new Coche();
-
-        System.out.println(cocheCoeta.color);
+    public void imprimeEstado() {
+        System.out.println("El modelo es " + modelo + ", matricula " + matricula + " de color " + color);
     }
 
+    public static void main(String[] args) throws Exception {
+        Coche cocheCoeta = new Coche();
+        Coche cocheInes = new Coche("Fiat Panda", "GR2689CRN", "Negro");
+        cocheCoeta.imprimeEstado();
+        cocheInes.imprimeEstado();
+    }
 }
