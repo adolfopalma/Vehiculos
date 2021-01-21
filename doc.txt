@@ -1,0 +1,65 @@
+Cread la clase Vehiculo que contenga información de las coordenadas x e y donde se
+encuentre el objeto vehículo, así como, de su estado (si está arrancado o no) y la
+dirección del mismo(Norte, Este, Sur, Oeste) con al menos la siguiente interfaz:
+
+        - Vehiculo(): inicializa las coordenadas a 0; el estado a no arrancado y la
+        dirección Este.
+        - parar(): pone el estado a no arrancado.
+        - arrancar(): pone el estado a arrancado.
+        - mover(): mueve el vehículo una posición en la dirección actual. Para ello el
+        vehículo debe estar arrancado.
+        - mover(int n): mueve el vehículo n posiciones en la dirección actual. Para ello el
+        vehículo debe estar arrancado.
+        - girar(int giro):Cambia la dirección según el valor de giro. Si giro es positivo a la
+        derecha. Si es negativo a la izquierda.
+        - estaArrancado(): devuelve true si el vehículo está arrancado y false en caso
+        contrario.
+        - getDirreccion(); devuelve la dirección del vehículo.
+        - getX(): devuelve la coordenada x del vehículo.
+        - getY(): devuelve la coordenada y del vehículo.
+        - imprimeEstado(): visualizará por la consola que es un vehículo que estará
+        arrancado o no, de coordenadas las que sea y dirección la que corresponda.
+
+
+A partir de esta clase cread las clases Coche y Avion. De un coche nos interesa además
+conocer su modelo, matricula y color. Deberá tener su correspondiente constructor.
+También tendrá métodos get que nos devuelvan el modelo, matricula y color y un
+método imprimeEstado() que visualice por la consola todas las características del objeto
+coche. De un avión nos interesa conocer su altura (coordenada z) y si esta despegado o
+no. Tendrá su constructor por defecto. Además deberá tener la siguiente interfaz:
+
+        - despegar(): cambiará el estado del avión a despegado true y pondrá z a 1. Para
+        ello el avión deberá estar arrancado.
+        - subir(): si el avión ha despegado incrementará z en 1.
+        - subir(int n): si el avión ha despegado incrementará z en n.
+        - bajar(): si el avión ha despegado decrementará z en 1, siempre que la nueva
+        posición no sea menor que 0.
+        bajar(int n): si el avión ha despegado decrementará z en n, siempre que la nueva
+        posición no sea menor que 0.
+        - imprimeEstado(): visualizará por la consola que es un avión y las características
+        del mismo.
+
+
+Definid la interface Sumergible con la siguiente interfaz:
+        - cambioDeMedio(): cambia de medio, de agua a tierra y viceversa. Para ello z debe
+        ser igual a 0.
+        - inmersión(): modifica el estado a inmersión y pone z=-1. Para ello el vehículo
+        debe estar arrancado y en el agua.
+        - ascender(int n): incrementa z en n. Para ello el medio debe ser el agua, el
+        vehículo estar arrancado y estar en estado de inmersión. Si z=0 debe cambiar el
+        estado de inmersión a false.
+        - descender(int n): decrementa z en n. Para ello el medio debe ser el agua, el
+        vehículo estar arrancado y estar en estado de inmersión.
+
+A partir de la clase Coche cread la clase CocheAcuatico con al menos la siguiente
+interfaz:
+
+        - CocheAcuatico(String, String, String): constructor que inicializará z a 0, estado
+        de inmersión a false y el medio a tierra.
+        - estaInmerso(): devuelve true si el vehículo ha realizado la inmersión y false en
+        caso contrario.
+        - estaEnElAgua(): devuelve true si el vehículo está en el agua y false en caso
+        contrario.
+        - imprimeEstado(): imprimirá el estado actual del vehículo por la consola.
+        Haced un programa de prueba. Para ello cread un array de “objetos” Vehiculo donde
+        guardareis objetos de las distintas clases previamente definidas.
