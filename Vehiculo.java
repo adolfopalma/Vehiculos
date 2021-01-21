@@ -11,6 +11,13 @@ public class Vehiculo {
         direccion = "Este";
     }
 
+    public Vehiculo(int cordX, int cordE, boolean est, String dire) {
+        x = cordX;
+        e = cordE;
+        estado = est;
+        direccion = dire;
+    }
+
     public void parar() {
         estado = false;
     }
@@ -75,8 +82,12 @@ public class Vehiculo {
 
     public static void main(String[] args) throws Exception {
         Vehiculo vehiculo = new Vehiculo();
+
         if (vehiculo.estaArrancado()) {
             System.out.println("El vehiculo esta arrancado sus cordenadas son X: " + vehiculo.getX() + ", e: "
+                    + vehiculo.getE() + " en direccion: " + vehiculo.getDireccion());
+        } else {
+            System.out.println("El vehiculo no esta arrancado sus cordenadas son X: " + vehiculo.getX() + ", e: "
                     + vehiculo.getE() + " en direccion: " + vehiculo.getDireccion());
         }
     }
