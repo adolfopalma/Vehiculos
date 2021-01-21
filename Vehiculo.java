@@ -1,4 +1,3 @@
-
 public class Vehiculo {
     int x, e;
     Boolean estado;
@@ -61,7 +60,33 @@ public class Vehiculo {
     }
 
     public void girar(int giro) {
-
+        if (giro >= 0) {
+            if (direccion == "Norte") {
+                direccion = "Este";
+            }
+            if (direccion == "Este") {
+                direccion = "Sur";
+            }
+            if (direccion == "Sur") {
+                direccion = "Oeste";
+            }
+            if (direccion == "Oeste") {
+                direccion = "Norte";
+            }
+        } else {
+            if (direccion == "Norte") {
+                direccion = "Oeste";
+            }
+            if (direccion == "Oeste") {
+                direccion = "Sur";
+            }
+            if (direccion == "Sur") {
+                direccion = "Este";
+            }
+            if (direccion == "Este") {
+                direccion = "Norte";
+            }
+        }
     }
 
     public boolean estaArrancado() {
@@ -91,5 +116,4 @@ public class Vehiculo {
                     + vehiculo.getE() + " en direccion: " + vehiculo.getDireccion());
         }
     }
-
 }
