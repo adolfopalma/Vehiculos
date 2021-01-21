@@ -7,8 +7,36 @@ public class Avion extends Vehiculo {
         despegado = false;
     }
 
-    /*
-     * - despegar(): cambiará el estado del avión a despegado true y pondrá z a 1.
-     * Para ello el avión deberá estar arrancado.
-     */
+    public void despegar() {
+        z = 1;
+        despegado = true;
+    }
+
+    public void subir() {
+        z++;
+    }
+
+    public void subir(int n) {
+        z = z + n;
+    }
+
+    public void bajar() {
+        if (despegado) {
+            z--;
+        }
+    }
+
+    public void bajar(int n) {
+        if (despegado & (z - n) >= 0) {
+            z = z - n;
+        }
+    }
+
+    public void imprimeEstado() {
+        if (despegado) {
+            System.out.println("El avion esta en el aire a " + z + " metros de altura, matricula ");
+        } else {
+            System.out.println("El avion esta en el suelo");
+        }
+    }
 }
