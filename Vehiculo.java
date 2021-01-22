@@ -105,15 +105,13 @@ public class Vehiculo {
         return e;
     }
 
-    public static void main(String[] args) throws Exception {
-        Vehiculo vehiculo = new Vehiculo();
-
-        if (vehiculo.estaArrancado()) {
-            System.out.println("El vehiculo esta arrancado sus cordenadas son X: " + vehiculo.getX() + ", e: "
-                    + vehiculo.getE() + " en direccion: " + vehiculo.getDireccion());
+    public void imprimeEstado() {
+        if (this.estaArrancado()) {
+            System.out.println("El vehiculo esta arrancado sus cordenadas son X: " + this.getX() + ", e: " + this.getE()
+                    + " en direccion: " + this.getDireccion());
         } else {
-            System.out.println("El vehiculo no esta arrancado sus cordenadas son X: " + vehiculo.getX() + ", e: "
-                    + vehiculo.getE() + " en direccion: " + vehiculo.getDireccion());
+            System.out.println("El vehiculo no esta arrancado sus cordenadas son X: " + this.getX() + ", e: "
+                    + this.getE() + " en direccion: " + this.getDireccion());
         }
     }
 }

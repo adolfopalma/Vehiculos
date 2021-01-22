@@ -42,11 +42,4 @@ public class Coche extends Vehiculo {
     public void imprimeEstado() {
         System.out.println("El modelo es " + modelo + ", matricula " + matricula + " de color " + color);
     }
-
-    public static void main(String[] args) throws Exception {
-        Coche cocheCoeta = new Coche();
-        Coche cocheInes = new Coche("Fiat Panda", "GR2689CRN", "Negro");
-        cocheCoeta.imprimeEstado();
-        cocheInes.imprimeEstado();
-    }
 }
